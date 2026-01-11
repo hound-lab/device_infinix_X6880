@@ -23,6 +23,7 @@ vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 # Audio
 vendor/lib/libbwc.so
 vendor/lib/libladder.so
+vendor/lib64/hw/anc.hal.so
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6789.so
 vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6789.so
 vendor/lib64/libMtkSpeechEnh.so
@@ -1407,6 +1408,7 @@ vendor/lib64/libminiui.so
 vendor/lib64/libSQLiteModule_VER_ALL.so
 vendor/lib64/libTranExtImgThread.so
 vendor/lib64/libTranfacFunction.so
+vendor/lib64/libTranfacUtils.so
 vendor/lib64/libTranfacOverlay.so
 vendor/lib64/libtrancamJsonConvertor.so
 vendor/lib64/libtrancam_filelockmgr.so
@@ -1913,7 +1915,7 @@ vendor/etc/SEC_THN31_FW_VTP.txt.bin
 vendor/lib64/libpn557_fw.so
 vendor/libnfc-nxp_RF.conf:vendor/etc/libnfc-nxp_RF.conf
 
-# NFC - from zircon OS2.0.2.0.VNOMIXM
+# NFC_Z
 product/pangu/system/etc/permissions/com.tms.cosdl.xml:system/etc/permissions/com.tms.cosdl.xml|dd941787a9eb7f828e3bcd9735c194e3978fa0ff
 product/pangu/system/etc/permissions/com.tms.nfc.xml:system/etc/permissions/com.tms.nfc.xml|3d9430f5be445c69532ca8f917a3b0f2fe098136
 product/pangu/system/framework/com.tms.cosdl.jar:system/framework/com.tms.cosdl.jar|7b325bfc7db0ba342a49f2e0ece0c037611e31c4
