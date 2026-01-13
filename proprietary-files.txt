@@ -1652,7 +1652,6 @@ vendor/lib64/liburee_meta_drmkeyinstall.so
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-mediatek
 -vendor/etc/vintf/manifest/com.anc.fingerprint.extension@1.0-service.xml
--vendor/etc/vintf/manifest/manifest_fingerprint.xml
 vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service-mediatek.xml
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-mediatek.rc
 vendor/lib64/libvpnr.so
@@ -1663,8 +1662,8 @@ vendor/lib64/vendor.mediatek.hardware.biometrics.fingerprint@2.1.so
 
 # Fingerprint (FOD Trigger)
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.3-service.transsion|6abfd70ff35a187f0b450184276e472a9019292c
-vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.3-service.transsion.xml|75cbb1f959fb56709ff757549d89e495588744e1
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.3-service.transsion.rc|21b317910a10eff349fed6262c753a0be65dfbcc
+vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.3-service.transsion.xml|75cbb1f959fb56709ff757549d89e495588744e1
 
 # Fingerprint (Silead)
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
