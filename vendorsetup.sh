@@ -13,3 +13,6 @@ if [ $RET -ne 0 ]; then
 else
   echo "OK: All patched"
 fi
+
+deviceDir=$(gettop)/device/infinix/X6880
+${deviceDir}/applypatch.sh ${deviceDir}/patches
