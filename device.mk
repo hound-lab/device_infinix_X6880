@@ -306,7 +306,6 @@ PRODUCT_PACKAGES += \
     SettingsResTarget \
     SettingsProviderResTarget \
     SystemUIResTarget \
-    TetheringConfigTarget \
     OpenDeltaOverlayMT6789 \
     WifiResTarget
 
@@ -494,6 +493,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     lib_driver_cmd_mt66xx \
     hostapd
+
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/infinix/X6880/X6880-vendor.mk)
