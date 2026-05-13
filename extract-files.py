@@ -23,7 +23,6 @@ namespace_imports = [
     'device/infinix/X6880',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
-    'hardware/transsion',
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
