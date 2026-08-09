@@ -497,12 +497,14 @@ PRODUCT_PACKAGES += \
     vndservice
 
 # Wi-Fi
+$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper \
     android.hardware.wifi-service \
     wpa_supplicant \
-    lib_driver_cmd_mt66xx \
-    hostapd
+    hostapd \
+    libkeystore-wifi-hidl:64 \
+    libkeystore-engine-wifi-hidl:64
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/infinix/X6880/X6880-vendor.mk)
