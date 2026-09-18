@@ -86,16 +86,3 @@ on post-fs-data
 on boot
     # Stop Serial Console
     stop console
-
-service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
-    class hal
-    user nfc
-    group nfc
-    disabled
-    override
-
-service nfc_hal_service.tms /vendor/bin/hw/android.hardware.nfc-service-tms
-    class hal
-    user nfc
-    group nfc
-    disabled
