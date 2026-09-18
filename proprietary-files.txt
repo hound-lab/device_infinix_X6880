@@ -1415,7 +1415,7 @@ vendor/lib64/libtrancam_filelockmgr.so
 vendor/lib64/libTransSched.so
 vendor/lib64/libTranVideoFilter.so
 vendor/lib64/libTranVideoLuminousEffects.so
-vendor/lib64/libvideofilmeffect.so
+vendor/lib64/libvideofilmeffect.so;DISABLE_CHECKELF
 vendor/lib64/libvideofilter_cl_64.so
 vendor/lib64/libVkLayer_mtk_rt_sdk.so
 vendor/lib64/vendor.transsion.performance.sched@1.0.so
@@ -1494,7 +1494,7 @@ vendor/lib64/mt6789/libmsnr.so;SYMLINK=vendor/lib64/libmsnr.so
 vendor/lib64/mt6789/libNvLutEffect.so;SYMLINK=vendor/lib64/libNvLutEffect.so
 vendor/lib64/mt6789/libportrait_repair_ppl3_ocl.so;SYMLINK=vendor/lib64/libportrait_repair_ppl3_ocl.so
 vendor/lib64/mt6789/librmsclib1.so;SYMLINK=vendor/lib64/librmsclib1.so
-vendor/lib64/mt6789/libsegmention.so;SYMLINK=vendor/lib64/libsegmention.so
+vendor/lib64/mt6789/libsegmention.so;SYMLINK=vendor/lib64/libsegmention.so;DISABLE_CHECKELF
 vendor/lib64/mt6789/libsegmentionPre.so;SYMLINK=vendor/lib64/libsegmentionPre.so
 vendor/lib64/mt6789/libskhynix_q2b_5022Q_shared.so;SYMLINK=vendor/lib64/libskhynix_q2b_5022Q_shared.so
 vendor/lib64/mt6789/libsmartdetector.so;SYMLINK=vendor/lib64/libsmartdetector.so
