@@ -4,8 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# API levels
-PRODUCT_SHIPPING_API_LEVEL := 31
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -46,13 +47,6 @@ PRODUCT_PACKAGES += \
     checkpoint_gc
 
 PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
-
-# Allow userspace reboots
-$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
-
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
@@ -153,7 +147,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0.vendor \
     libion.vendor \
     libui.vendor \
-    libdrm.vendor 
+    libdrm.vendor
 
 PRODUCT_PACKAGES += \
     ANGLE
@@ -195,7 +189,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss-V1-ndk.vendor
 
 PRODUCT_PACKAGES += \
-    libcurl.vendor 
+    libcurl.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -266,7 +260,7 @@ PRODUCT_PACKAGES += \
 # Linker config
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
     $(LOCAL_PATH)/configs/linker.config.json
-    
+
 # Media
 $(call soong_config_set_bool,android_hardware_mediatek_codec2,link_v33_libstagefright_foundation,true)
 PRODUCT_PACKAGES += \
@@ -312,6 +306,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     ApertureOverlay
+
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -435,6 +432,9 @@ PRODUCT_PACKAGES += \
     libsqlite.vendor \
     libdumpstateutil.vendor
 
+# Shipping API levels
+PRODUCT_SHIPPING_API_LEVEL := 33
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
@@ -452,7 +452,6 @@ PRODUCT_COPY_FILES += \
 
 # USB
 $(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
-
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
@@ -493,7 +492,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager \
     vndservice
-    
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper \
@@ -501,9 +500,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     lib_driver_cmd_mt66xx \
     hostapd
-
-PRODUCT_PACKAGES += \
-    NcmTetheringOverlay
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/infinix/X6880/X6880-vendor.mk)

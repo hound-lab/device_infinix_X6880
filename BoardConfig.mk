@@ -12,7 +12,15 @@ CONFIGS_PATH := $(DEVICE_PATH)/configs
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a76
+
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv8-2a
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Enable 64-bit for non-zygote.
 ZYGOTE_FORCE_64 := true
@@ -26,20 +34,7 @@ TARGET_DYNAMIC_64_32_MEDIASERVER := true
 # Include 64-bit drmserver to support 64-bit only devices
 TARGET_DYNAMIC_64_32_DRMSERVER := true
 
-# Build the 32 bit targets
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-2a
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := generic
-TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
-
 # ART
-WITH_DEXPREOPT := true
-DONT_DEXPREOPT_PREBUILTS := true
-DEX_PREOPT_DEFAULT := generate-vdex-and-image
-WITH_DEXPREOPT_DEBUG_INFO := false
-
 ifeq ($(TARGET_BUILD_VARIANT),user)
 ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
@@ -79,6 +74,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Broken Rules
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # DTB
 BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
@@ -182,7 +178,7 @@ BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 
 # SEPolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
-BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
