@@ -15,6 +15,18 @@ bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 
+# LMKD
+ro.lmk.kill_heaviest_task=false
+ro.lmk.use_psi=true
+ro.lmk.use_minfree_levels=false
+ro.lmk.reorder_apps=true
+ro.lmk.kill_timeout_ms=500
+ro.lmk.thrashing_limit=40
+ro.lmk.thrashing_limit_decay=30
+ro.lmk.downgrade_pressure=25
+ro.lmk.upgrade_pressure=80
+ro.lmk.swap_free_low_percentage=15
+
 # RKPD
 remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
