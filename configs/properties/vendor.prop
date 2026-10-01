@@ -1,6 +1,3 @@
-# AAL
-ro.vendor.mtk_aal_support=1
-
 # Audio
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
@@ -11,11 +8,11 @@ ro.audio.usb.period_us=16000
 ro.vendor.mtk_audio_alac_support=1
 ro.vendor.mtk_audio_ape_support=1
 ro.vendor.mtk_audio_tuning_tool_ver=V1
-vendor.usbsph.dl.pcm.dump=0
-vendor.usbsph.ul.pcm.dump=0
-vendor.usbsph.srcaws.pcm.dump=0
-vendor.streamout.pcm.dump=0
 vendor.streamin.pcm.dump=0
+vendor.streamout.pcm.dump=0
+vendor.usbsph.dl.pcm.dump=0
+vendor.usbsph.srcaws.pcm.dump=0
+vendor.usbsph.ul.pcm.dump=0
 
 # Bluetooth
 bluetooth.device.class_of_device?=90,2,12
@@ -58,18 +55,19 @@ ro.vendor.camkit_enabled=1
 ro.vendor.mtk_cam_security_support=0
 ro.vendor.mtk_camera_app_version=3
 ro.vendor.mtk_slow_motion_support=1
+ro.vendor.smvr.p2batch.hd=4
+ro.vendor.smvr.p2batch.vga=8
 vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
 vendor.debug.tran_cam_dynamic_fps=0
 vendor.mtk.camera.app.fd.video=1
 
-# Charger
+# Charging
 ro.vendor.mtk_fast_charging_support=1
 
 # Connsys
 persist.vendor.connsys.chipid=-1
 persist.vendor.connsys.dynamic.dump=0
-persist.vendor.connsys.fm_chipid=mt6631_6635
 persist.vendor.connsys.patch.version=-1
 ro.vendor.connsys.dedicated.log=0
 ro.vendor.connsys.dedicated.log.port=none
@@ -86,14 +84,42 @@ dalvik.vm.heaptargetutilization=0.46
 dalvik.vm.heapminfree=8m
 dalvik.vm.heapmaxfree=48m
 
+# Display
+debug.mediatek.disp_decompress=1
+debug.sf.auto_latch_unsignaled=1
+debug.sf.disable_client_composition_cache=1
+debug.sf.enable_adpf_cpu_hint=true
+debug.sf.enable_gl_backpressure=1
+debug.sf.enable_hwc_vds=0
+debug.sf.enable_transaction_tracing=false
+debug.sf.high_fps_early_gl_phase_offset_ns=-12666667
+debug.sf.high_fps_early_phase_offset_ns=-12666667
+debug.sf.high_fps_late_app_phase_offset_ns=-8000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-12666667
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.region_sampling_duration_ns=8333333
+debug.sf.region_sampling_period_ns=99999984
+debug.sf.region_sampling_timer_timeout_ns=99999984
+debug.sf.treat_170m_as_sRGB=1
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.game_default_frame_rate_override=120
+ro.surface_flinger.max_frame_buffer_acquired_buffers=6
+ro.surface_flinger.primary_display_orientation=ORIENTATION_0
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.set_idle_timer_ms=3000
+ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.uclamp.min=328
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
+ro.surface_flinger.vsync_event_phase_offset_ns=8400000
+ro.surface_flinger.vsync_sf_event_phase_offset_ns=-10933333
+ro.surface_flinger.wcg_composition_dataspace=143261696
+
 # DRM
 drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l1_support=1
 
-# Enable virtual A/B compression
-ro.virtual_ab.compression.threads=true
-
 # FM
+persist.vendor.connsys.fm_chipid=mt6631_6635
 ro.vendor.fm.platform=mt6631_6635
 
 # FUSE passthrough
@@ -102,62 +128,51 @@ persist.sys.fuse.passthrough.enable=true
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
 
-# Graphics
-debug.graphics.game_default_frame_rate.disabled=true
-debug.mediatek.appgamepq_compress=1
-debug.sf.disable_client_composition_cache=1
-graphics.gpu.profiler.support=true
-ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.hal_format=0x1
-ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.recordable=true
-ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.framebuffer_target=false
-ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.hal_format=0x2
-ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.recordable=false
-ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.framebuffer_target=false
-ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.hal_format=0x2
-ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.recordable=false
-ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.framebuffer_target=false
-ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.hal_format=0x4
-ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.recordable=false
-ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.framebuffer_target=false
-ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.hal_format=0x2b
-ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.recordable=false
-ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.framebuffer_target=false
-ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.hal_format=0x16
-ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.recordable=false
-ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.framebuffer_target=false
-ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.hal_format=0x23
-ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.framebuffer_target=false
-ro.hardware.egl=mali
-ro.hardware.gralloc=common
-ro.hardware.hwcomposer=mtk_common
-ro.hardware.vulkan=mali
-ro.opengles.version=196610
-ro.vendor.smvr.p2batch.vga=8
-ro.vendor.smvr.p2batch.hd=4
-ro.vendor.mtk_blulight_def_support=1
-persist.vendor.sys.mtkaal.function=0
-
 # GPS
 ro.vendor.gps.chrdev=gps_drv_stp
 ro.vendor.mtk_agps_app=1
 ro.vendor.mtk_gps_support=1
 ro.vendor.mtk_log_hide_gps=0
 
-# IncrementalFS
-ro.incremental.enable=yes
+# Graphics
+debug.graphics.game_default_frame_rate.disabled=true
+debug.renderengine.backend=skiaglthreaded
+graphics.gpu.profiler.support=true
+ro.hardware.egl=mali
+ro.hardware.gralloc=common
+ro.hardware.hwcomposer=mtk_common
+ro.hardware.vulkan=mali
+ro.opengles.version=196610
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.hal_format=0x2b
+ro.vendor.arm.egl.configs.r10_g10_b10_a2_32bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.framebuffer_target=false
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.hal_format=0x16
+ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.recordable=false
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.hal_format=0x4
+ro.vendor.arm.egl.configs.r5_g6_b5_a0_16bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.hal_format=0x2
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_24bit_yuv_special.hal_format=0x23
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.hal_format=0x2
+ro.vendor.arm.egl.configs.r8_g8_b8_a0_32bit_fixed.recordable=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.framebuffer_target=false
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.hal_format=0x1
+ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.recordable=true
+ro.vendor.composer_version=2.3
+ro.vendor.mtk_backlight_hwc_support=0
 
 # HWUI
-debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=60
-debug.sf.enable_adpf_cpu_hint=true
-
-# HWComposer
-ro.vendor.mtk_backlight_hwc_support=0
-ro.vendor.composer_version=2.3
+debug.hwui.use_hint_manager=true
 
 # IMS
-persist.vendor.mdrsra_v2_support=1
 persist.vendor.ims_support=1
+persist.vendor.mdrsra_v2_support=1
 persist.vendor.mtk.volte.enable=1
 persist.vendor.mtk_ct_volte_support=3
 persist.vendor.mtk_dynamic_ims_switch=1
@@ -169,44 +184,39 @@ persist.vendor.vonr_setting_support=0
 ro.vendor.md_auto_setup_ims=1
 ro.vendor.mtk_data_config=1
 
-# Keymaster
+# Incremental FS
+ro.incremental.enable=yes
+
+# Keystore
 ro.vendor.keymaster_version=5.0
 
 # Light
 ro.vendor.transsion.backlight_12bit=1
 
 # LMKD
-ro.lmk.kill_heaviest_task=true
-ro.lmk.use_psi=true
-ro.lmk.use_minfree_levels=false
-ro.lmk.thrashing_limit_decay=50
 ro.lmk.downgrade_pressure=30
 ro.lmk.filecache_min_kb=128000
+ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=50
 ro.lmk.stall_limit_critical=55
+ro.lmk.thrashing_limit_decay=50
+ro.lmk.use_minfree_levels=false
+ro.lmk.use_psi=true
 
 # Media
-media.c2.hal.selection=aidl
-debug.mediatek.disp_decompress=1
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
+media.c2.hal.selection=aidl
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.vendor.iomanager.support=1
+ro.vendor.jpeg_decode_sw_opt=1
 ro.vendor.mtk.c2.vdec.fmt.support.level=1
 ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
 vendor.media.heif.feature.off=1
 vendor.media.heif.highThreshold=20
-vendor.mtk.vdec.waitkeyframeforplay=9
-ro.vendor.jpeg_decode_sw_opt=1
 vendor.media.omx=0
-
-# Mediatek
-ro.vendor.mgk_name=mgk_64_entry_level_k510
-ro.vendor.mgvi_name=mgvi_64_nfc_armv82
-ro.vendor.mediatek.platform=MT6789
-ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
-ro.vendor.mediatek.version.release=alps-mp-s0.mp1.rc-V15.102_reallytek.s0mp1rc.k61v1.64.bsp_P59
+vendor.mtk.vdec.waitkeyframeforplay=9
 
 # Misc
 persist.vendor.factory.GB2312=no
@@ -228,13 +238,24 @@ ro.vendor.mtk_nn.option=A,B,C,D,E,F,G,Z
 ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mtk_nn_quant_preferred=1
 
-# Power
-vendor.powerhal.interaction.offset=0
-vendor.powerhal.interaction.min=50
-vendor.powerhal.interaction.max=150
+# Performance
 persist.device_config.activity_manager.use_freezer=true
+vendor.powerhal.interaction.max=150
+vendor.powerhal.interaction.min=50
+vendor.powerhal.interaction.offset=0
+
+# Platform
+ro.vendor.mediatek.platform=MT6789
+ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
+ro.vendor.mediatek.version.release=alps-mp-s0.mp1.rc-V15.102_reallytek.s0mp1rc.k61v1.64.bsp_P59
+ro.vendor.mgk_name=mgk_64_entry_level_k510
+ro.vendor.mgvi_name=mgvi_64_nfc_armv82
 
 # PQ
+debug.mediatek.appgamepq_compress=1
+persist.vendor.sys.mtkaal.function=0
+ro.vendor.mtk_aal_support=1
+ro.vendor.mtk_blulight_def_support=1
 ro.vendor.mtk_pq_color_mode=1
 ro.vendor.mtk_pq_support=2
 ro.vendor.pq.disp_lcm_name_support=0
@@ -305,37 +326,9 @@ ro.vendor.radio.max.multisim=dsds
 ro.vendor.sim_me_lock_mode=3
 telephony.active_modems.max_count=2
 
-# Sensor
+# Sensors
 ro.vendor.init.sensor.rc=init.sensor_2_0.rc
 ro.vendor.mtk.sensor.support=yes
-
-# Surfaceflinger
-debug.renderengine.backend=skiaglthreaded
-debug.sf.auto_latch_unsignaled=1
-debug.sf.enable_gl_backpressure=1
-debug.sf.enable_hwc_vds=0
-debug.sf.enable_transaction_tracing=false
-debug.sf.high_fps_early_gl_phase_offset_ns=-12666667
-debug.sf.high_fps_early_phase_offset_ns=-12666667
-debug.sf.high_fps_late_app_phase_offset_ns=-8000000
-debug.sf.high_fps_late_sf_phase_offset_ns=-12666667
-debug.sf.predict_hwc_composition_strategy=0
-debug.sf.region_sampling_duration_ns=8333333
-debug.sf.region_sampling_period_ns=99999984
-debug.sf.region_sampling_timer_timeout_ns=99999984
-debug.sf.treat_170m_as_sRGB=1
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.game_default_frame_rate_override=120
-ro.surface_flinger.max_frame_buffer_acquired_buffers=6
-ro.surface_flinger.primary_display_orientation=ORIENTATION_0
-ro.surface_flinger.protected_contents=true
-ro.surface_flinger.set_idle_timer_ms=3000
-ro.surface_flinger.set_touch_timer_ms=200
-ro.surface_flinger.uclamp.min=328
-ro.surface_flinger.use_content_detection_for_refresh_rate=true
-ro.surface_flinger.vsync_event_phase_offset_ns=8400000
-ro.surface_flinger.vsync_sf_event_phase_offset_ns=-10933333
-ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # SoC
 ro.soc.manufacturer=Mediatek
@@ -347,6 +340,9 @@ ro.vendor.mtk_trustonic_tee_support=1
 
 # USB
 vendor.usb.controller=musb-hdrc
+
+# Virtual A/B compression
+ro.virtual_ab.compression.threads=true
 
 # Wifi
 ro.vendor.mtk_tb_wifi_3g_mode=0
