@@ -17,7 +17,6 @@ vendor.usbsph.srcaws.pcm.dump=0
 vendor.usbsph.ul.pcm.dump=0
 
 # Bluetooth
-bluetooth.profile.sap.server.enabled=true
 persist.bluetooth.a2dp_offload.cap=sbc-aac
 persist.bluetooth.a2dp_offload.disabled=true
 ro.vendor.bt.platform=connac1x
